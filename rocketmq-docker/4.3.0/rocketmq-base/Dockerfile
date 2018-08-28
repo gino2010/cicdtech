@@ -40,7 +40,9 @@ RUN mkdir -p \
 RUN curl https://dist.apache.org/repos/dist/release/rocketmq/${ROCKETMQ_VERSION}/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip -o rocketmq.zip \
  && unzip rocketmq.zip \
  && rm -rf rocketmq-all*.zip \
- && rm -rf rocketmq.zip
+ && rm -rf rocketmq.zip \
+ && mv rocketmq-all-4.3.0-bin-release/* ./ \
+ && rm -rf rocketmq-all-4.3.0-bin-release
 
 # add scripts
 COPY scripts/ ${ROCKETMQ_HOME}/bin/
