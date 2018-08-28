@@ -1,12 +1,12 @@
 # Apache Pulsar Docker module
 
-Apache Pulsar Docker module provides Dockerfiles and scripts for RocketMQ.
+Apache Pulsar Docker module provides Dockerfiles and scripts for Pulsar.
 
 This repository includes the following: 
 
-1. Dockerfile and scripts for RocketMQ run in following 2 scenarios:
-- RocketMQ runs on single Docker daemon
-- RocketMQ runs with docker-compose
+1. Dockerfile and scripts for Pulsar run in following 2 scenarios:
+- Pulsar runs on standalone Docker daemon
+- Pulsar runs with docker-compose
 
 ## Quick start: Build and run Pulsar with a standalone instance
 
