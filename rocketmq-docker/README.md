@@ -1,6 +1,6 @@
 # Apache RocketMQ Docker module
 
-Apache [RocketMQ]('http://rocketmq.apache.org/') Docker module provides Dockerfiles and scripts for RocketMQ.
+Apache [RocketMQ](http://rocketmq.apache.org/) Docker module provides Dockerfiles and scripts for RocketMQ.
 
 This repository includes the following: 
 
