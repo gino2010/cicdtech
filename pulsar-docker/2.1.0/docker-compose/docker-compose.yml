@@ -1,0 +1,14 @@
+# standalone
+version: '3'
+services:
+  pulsar:
+    container_name: "pulsar"
+    image: "apachepulsar/pulsar"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "6650:6650"
+      - "8080:8080"
+    volumes:
+      - $PWD/data:/pulsar/data
