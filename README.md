@@ -19,3 +19,30 @@ Maybe include:
 主要为非编程类的相关技术，相关内容都将基于互联网资源总结。
 
 Mainly for non-programming related technologies, relevant content will be summarized based on Internet resources.
+
+### Agile Manifesto
+
+We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
+
+- Individuals and interactions over processes and tools
+- Working software over comprehensive documentation
+- Customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+That is, while there is value in the items on the right, we value the items on the left more.
+
+Agile is NOT a:
+
+- Methodology
+- Specific Way of Developing Software
+- Framework or Process
+
+Agile is a set of Values and Principles
+
+Scrum is a one of most popular methodologies of Agile.
+
+### DevOps
+
+DevOps focuses on the collaboration between Development and Operation.
+
+![](http://blog.appdynamics.com/wp-content/uploads/2013/06/DevOps-infinity-loop2.png)
