@@ -20,7 +20,7 @@ Maybe include:
 
 Mainly for non-programming related technologies, relevant content will be summarized based on Internet resources.
 
-### Agile Manifesto
+### [Agile Manifesto](http://agilemanifesto.org/)
 
 We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
 
@@ -37,9 +37,38 @@ Agile is NOT a:
 - Specific Way of Developing Software
 - Framework or Process
 
-Agile is a set of Values and Principles
+Agile is a set of Values and Principles. Be Agile, Don't do.
+
+![](https://www.scrum.as/academy/2/gfx/c3.2.jpg)
+
+### Scrum
 
 Scrum is a one of most popular methodologies of Agile.
+
+[Three roles](https://www.agile42.com/en/agile-info-center/scrum/scrum-roles/)
+- The Scrum Team
+- Scrum Master
+- Scrum Product Owner
+
+Three artifacts
+- Product Backlog
+- Sprint Backlog
+- Product Increment
+
+[Five events](https://www.thescrummaster.co.uk/scrum/the-five-scrum-events/)
+- Daily Scrum
+- Sprint Planning
+- Sprint Review
+- Sprint Retrospective
+- The Sprint
+
+[Five values](https://www.scrum.org/resources/blog/5-scrum-values-take-center-stage)
+- Commitment
+- Focus
+- Openness
+- Respect
+- Courage
+
 
 ### DevOps
 
