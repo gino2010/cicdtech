@@ -62,7 +62,7 @@ Three artifacts
 - Sprint Retrospective
 - The Sprint
 
-[Five values](https://www.scrum.org/resources/blog/5-scrum-values-take-center-stage)
+[Five values](https://www.kainos.pl/blog/5-scrum-values/)
 - Commitment
 - Focus
 - Openness
