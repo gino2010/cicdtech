@@ -1,7 +1,7 @@
 # CI/CD Tech
-主题为持续集成和持续部署相关技术，也可能包含一些其它的部署相关的技术内容。
+主题为持续集成和持续部署相关技术，也可能包含一些其它的部署相关的技术和开发项目管理内容。
 
-The topics in this project are related technologies of continuous integration and continuous deployment, and maybe also include some other deployment-related technical content.
+The topics in this project are related technologies of continuous integration and continuous deployment, and maybe also include some other content of deployment-related technical and project management .
 
 由于平时使用微服务相关开发架构，所以也在使用Docker等容器。有很多内容需要整理，想使用此工程整理相关技术
 
