@@ -1,0 +1,16 @@
+version: "3"
+services:
+  box1:
+    container_name: "box1"
+    image: 'busybox'
+    networks:
+      - compose-bridge
+  box2:
+    container_name: "box2"
+    image: 'busybox'
+    networks:
+      - compose-bridge
+
+networks:
+  compose-bridge:
+    driver: bridge

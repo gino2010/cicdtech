@@ -1,0 +1,17 @@
+# command log
+
+docker network create gino-bridge
+
+docker network ls
+
+docker run --name box1 -it --rm busybox sh
+
+docker run --name box2 -it --rm busybox sh
+
+docker run --name box3 -it --rm  --network gino-bridge busybox sh
+
+docker run --name box4 -it --rm  --network gino-bridge busybox sh
+
+ping <ip>
+
+ping <contain-name>
