@@ -2,11 +2,13 @@ version: "3"
 services:
   box1:
     container_name: "box1"
+    command: "tail -f /dev/null"
     image: 'busybox'
     networks:
       - compose-bridge
   box2:
     container_name: "box2"
+    command: "tail -f /dev/null"
     image: 'busybox'
     networks:
       - compose-bridge
