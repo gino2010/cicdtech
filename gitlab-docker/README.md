@@ -2,7 +2,11 @@
 
 公司在用gitlab服务，也是通过docker搭建，这里列出docker-compose基本文件。
 
+Our company is using the gitlab service, which is also built by docker. List docker-compose file here.
+
 计划尝试其中一些细节功能，例如和CI相关的功能等，如有价值，便于今后推广使用。
+
+Plan to try some features, such as CI related, etc., if valuable, I will promote it in my team.
 
 ### Edition
 
