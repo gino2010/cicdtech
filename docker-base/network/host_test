@@ -1,0 +1,9 @@
+# command log
+
+docker network ls
+
+docker run --name busybox -it --rm --network host busybox sh
+
+ifconfig
+
+ping <ip>

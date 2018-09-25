@@ -1,6 +1,8 @@
 # command log
 
 docker network create gino-bridge
+# docker network create -d bridge --subnet 172.10.0.0/24 --gateway 172.10.0.1 gino-bridge
+# docker network inspect gino-bridge
 
 docker network ls
 

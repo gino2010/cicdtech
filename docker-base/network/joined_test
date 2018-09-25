@@ -1,0 +1,22 @@
+# command log
+
+docker network create gino-bridge
+
+docker network ls
+
+docker run --name box1 -it --rm --network gino-bridge busybox sh
+
+docker run --name box2 -it --rm --network gino-bridge busybox sh
+
+docker run --name box3 -it --rm --network container:box2 busybox sh
+
+# box2 box3 信息一样
+ifconfig
+
+ping <ip>
+
+# box2 ping box1 OK
+# box3 ping box1 OK
+# box1 ping box2 OK
+# box1 ping box3 Failed
+ping <contain-name>
