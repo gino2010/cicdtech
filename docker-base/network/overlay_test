@@ -25,6 +25,17 @@ docker-machine create --driver generic --generic-ip-address=192.168.102.48 host4
 
 docker-machine ls
 
+# register your docker host
+# add following to docker.service for each host
+--cluster-store=consul://<consul_ip>:8500 --cluster-advertise=ens3:2376
+
+# apply change
+systemctl daemon-reload
+systemctl restart docker.service
+
+# if error, maybe you need to run this command:
+rm -rf /var/lib/docker
+
 # any remote host
 docker network create -d overlay ov_net1
 
