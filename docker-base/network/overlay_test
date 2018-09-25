@@ -1,0 +1,37 @@
+# command log
+
+# 192.168.102.52
+docker run -d -p 8500:8500 -h consul --name consul progrium/consul -server -bootstrap
+
+# install docker machine
+# Due to this command access amazonaws.com, maybe you need to configure a proxy for your linux system
+#export ALL_PROXY=
+#export FTP_PROXY=
+#export HTTP_PROXY=
+#export HTTPS_PROXY=
+#export NO_PROXY=
+base=https://github.com/docker/machine/releases/download/v0.14.0 &&
+  curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+  sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+
+# after adding remote host in docker-machine host, remote host's docker containers will be clean!!!!
+# add host 47 in 52
+ssh-copy-id 192.168.102.47
+docker-machine create --driver generic --generic-ip-address=192.168.102.47 host47
+
+# add host 48 in 52
+ssh-copy-id 192.168.102.48
+docker-machine create --driver generic --generic-ip-address=192.168.102.48 host48
+
+docker-machine ls
+
+# any remote host
+docker network create -d overlay ov_net1
+
+# host47
+docker run --name box47 -it --rm --network ov_net1 busybox sh
+
+# host48
+docker run --name box48 -it --rm --network ov_net1 busybox sh
+
+ping <ip>

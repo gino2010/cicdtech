@@ -16,21 +16,32 @@ Linux 主机
 #### bridge
 
 默认的网络驱动模式，docker容器之间通过veth进行通讯。
+
 与主机网络互通
+
 自定义 bridge网络中，内嵌dns server将工作，可以ping容器名称，即通过容器名进行通信
 
 #### host
 
 与docker主机共享网络栈。 ifconfig可以看到所有主机的网卡。
+
 使用场景为，高效网络请求场景。 同时需要注意docker 容器与主机之间的端口冲突问题
 
 #### overlay
+用于跨物理主机容器通信，配合docker machine使用。我估计也会配合docker swarm和kubernets，也许后面会实验到
+
+需要在docker machine 环境下对其进行实验
+
+使用一台作为注册服务器主机，安装consul和docker machine
+
+两台作为docker 主机，分别运行busybox在overlay 网络中，可以互通
 
 #### macvlan
 
 #### joined
 
 两个容器之间共享网络栈，两个容器将拥有相同的ip和mac地址
+
 使用场景例如监控，即需要独立而又需要两个容器网络高度一致的场景。
 
 #### none
