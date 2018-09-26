@@ -1,0 +1,23 @@
+# command log
+
+# enp2s0 is your network adapter, open promisc on host47 and host48
+# host 48
+ip link set enp2s0 promisc on
+
+ip link show enp2s0
+
+# host 47
+ip link set enp3s0 promisc on
+
+ip link show enp3s0
+
+# create macvlan network
+# host 48
+docker network create -d macvlan --subnet=172.16.86.0/24 --gateway=172.16.86.1 -o parent=enp2s0 mac_net1
+# host 47
+docker network create -d macvlan --subnet=172.16.86.0/24 --gateway=172.16.86.1 -o parent=enp3s0 mac_net1
+
+# host47
+docker run --name box47 -it --rm --ip=172.16.86.10 --network mac_net1 busybox sh
+# host48
+docker run --name box48 -it --rm --ip=172.16.86.11 --network mac_net1 busybox sh
