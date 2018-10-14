@@ -2,7 +2,9 @@
 version: '3'
 services:
   rabbitmq:
+    container_name: "rabbitmq"
     image: "rabbitmq:3.7.8-management-alpine"
+    restart: "always"
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -13,7 +15,9 @@ services:
       - mq-network
 
   activemq:
+    container_name: "activemq"
     image: webcenter/activemq:latest
+    restart: "always"
     ports:
       - "8161:8161"
       - "61613:61613"
@@ -25,8 +29,11 @@ services:
       ACTIVEMQ_ADMIN_PASSWORD: admin
     networks:
       - mq-network
+
   zookeeper:
+    container_name: "zookeeper"
     image: "wurstmeister/zookeeper"
+    restart: "always"
     ports:
       - "2181:2181"
     networks:
@@ -35,6 +42,7 @@ services:
   kafka:
     container_name: "kafka"
     image: "wurstmeister/kafka"
+    restart: "always"
     ports:
       - "9092:9092"
     environment:
@@ -50,7 +58,9 @@ services:
       - mq-network
 
   kafkamanger:
+    container_name: "kafka-manager"
     image: "deric/kafka-manager:1.3.3.18"
+    restart: "always"
     ports:
       - "9000:9000"
     environment:
