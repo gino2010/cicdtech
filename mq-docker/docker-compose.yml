@@ -39,6 +39,8 @@ services:
     networks:
       - mq-network
 
+  # 可以使用多个service启动多个container模拟集群节点
+  # you can create several services to emulate nodes of cluster
   kafka:
     container_name: "kafka"
     image: "wurstmeister/kafka"
@@ -47,9 +49,11 @@ services:
       - "9092:9092"
     environment:
       KAFKA_ADVERTISED_HOST_NAME: $CF_HOST_IP
-      KAFKA_CREATE_TOPICS: "Topic1:1:1"
+      #KAFKA_ADVERTISED_PORT: '9092'
+      #KAFKA_PORT: '9092'
+      #KAFKA_CREATE_TOPICS: "Topic1:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      #KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
